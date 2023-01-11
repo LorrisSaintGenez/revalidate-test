@@ -1,0 +1,38 @@
+{
+  "name": "algoliaweb_static-react",
+  "description": "This repository contains all algolia.com static content.",
+  "version": "1.0.0",
+  "homepage": "https://www.algolia.com/",
+  "author": "Algolia (https://www.algolia.com/)",
+  "contributors": [
+    "LukyVj <lucas.bonomi@algolia.com>",
+    "Ronan Levesque <ronan.levesque@algolia.com>",
+    "Lorris Saint-Genez <lorris.saint-genez@algolia.com>",
+    "Sven Soldin <sven.soldin@algolia.com>",
+    "Loïc Say <loic.say@algolia.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "repository": "https://github.com/algolia/AlgoliaWeb_static.git",
+  "bugs": "https://github.com/algolia/AlgoliaWeb_static/issues",
+  "scripts": {
+    "build": "next build",
+    "build:vercel": "next build",
+    "dev": "next dev",
+    "serve": "next start"
+  },
+  "dependencies": {
+    "next": "^12",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@types/react": "17.0.39",
+    "@types/react-dom": "^17.0.3",
+    "typescript": "^4.5.4"
+  },
+  "engines": {
+    "node": ">= 16.16.0"
+  }
+}
