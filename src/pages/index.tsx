@@ -2,7 +2,7 @@ import React from 'react';
 
 const REVALIDATE_TIME_IN_S = 30;
 
-const Home = () => {
+const Index = () => {
   const currentTime = new Date().toString();
   return (
     <div>
@@ -21,4 +21,4 @@ export function getStaticProps() {
   };
 }
 
-export default Home;
+export default Index;
