@@ -1,21 +1,24 @@
 import React from 'react';
 
-const Index = () => <div>hi</div>;
-
-const REVALIDATE_DELAY = 60;
-
-export function getStaticProps() {
-  // eslint-disable-next-line no-console
-  console.log(
-    `Hello there, are you really called every ${REVALIDATE_DELAY} seconds?`
+export default function Home({ renderTime }: { renderTime: string }) {
+  const currentTime = new Date().toString();
+  return (
+    <>
+      <div>
+        <h1>Hello!</h1>
+        <p>Last rendered at -------------- {renderTime}</p>
+        <p>It is currently --------------- {currentTime}</p>
+      </div>
+    </>
   );
-
-  return {
-    props: {
-      test: 'OK',
-    },
-    revalidate: REVALIDATE_DELAY,
-  };
 }
 
-export default Index;
+export async function getStaticProps() {
+  console.log('hello');
+  return {
+    props: {
+      renderTime: new Date().toString(),
+    },
+    revalidate: 30, // In seconds
+  };
+}
