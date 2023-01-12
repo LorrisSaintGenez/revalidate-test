@@ -2,7 +2,7 @@ import React from 'react';
 
 const REVALIDATE_TIME_IN_S = 30;
 
-export default function Home({ renderTime }: { renderTime: string }) {
+const Home = ({ renderTime }: { renderTime: string }) => {
   const currentTime = new Date().toString();
   return (
     <>
@@ -13,7 +13,7 @@ export default function Home({ renderTime }: { renderTime: string }) {
       </div>
     </>
   );
-}
+};
 
 export async function getStaticProps() {
   console.log('hello');
@@ -24,3 +24,5 @@ export async function getStaticProps() {
     revalidate: REVALIDATE_TIME_IN_S, // In seconds
   };
 }
+
+export default Home;
