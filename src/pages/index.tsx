@@ -1,7 +1,12 @@
 import React from 'react';
 import crypto from 'crypto';
 
-const Index = () => <div>hi</div>;
+const Index = () => (
+  <div>
+    <h1>Hello!</h1>
+    <p>It is currently --------------- {new Date().toString()}</p>
+  </div>
+);
 
 const REVALIDATE_DELAY = 30;
 
