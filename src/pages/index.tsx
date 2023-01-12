@@ -10,9 +10,13 @@ const Index = () => (
 );
 
 export function getStaticProps() {
+  console.log(
+    `Hello there, are you really called every ${REVALIDATE_TIME_IN_S} seconds?`
+  );
+
   return {
     props: {
-      renderTime: 'hi',
+      test: 'hi',
     },
     revalidate: REVALIDATE_TIME_IN_S, // In seconds
   };
