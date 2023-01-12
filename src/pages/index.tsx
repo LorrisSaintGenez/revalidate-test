@@ -2,12 +2,7 @@ import React from 'react';
 
 const REVALIDATE_TIME_IN_S = 30;
 
-const Index = () => (
-  <div>
-    <h1>Hello!</h1>
-    <p>It is currently --------------- {new Date().toString()}</p>
-  </div>
-);
+const Index = () => <div>hi</div>;
 
 export function getStaticProps() {
   console.log(
