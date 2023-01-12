@@ -12,8 +12,7 @@ const Home = () => {
   );
 };
 
-export async function getStaticProps() {
-  console.log(new Date().toString());
+export function getStaticProps() {
   return {
     props: {
       renderTime: 'hi',
