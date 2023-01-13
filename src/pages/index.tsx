@@ -3,7 +3,17 @@ import crypto from 'crypto';
 
 const id = crypto.randomBytes(16).toString('hex');
 
-const Index = () => <div>hi</div>;
+const Index = () => {
+  if (typeof window === 'undefined') {
+    console.log('Rendering on Server');
+  }
+  return (
+    <div>
+      <h1>Hello!</h1>
+      <p>It is currently --------------- {new Date().toString()}</p>
+    </div>
+  );
+};
 
 const REVALIDATE_DELAY = 30;
 
