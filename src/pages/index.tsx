@@ -7,7 +7,12 @@ const Index = () => {
   if (typeof window === 'undefined') {
     console.log('Rendering on Server');
   }
-  return <div>hi</div>;
+  return (
+    <div>
+      <h1>Hello!</h1>
+      <p>It is currently ---------------</p>
+    </div>
+  );
 };
 
 const REVALIDATE_DELAY = 30;
