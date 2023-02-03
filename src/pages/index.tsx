@@ -1,4 +1,4 @@
-import React from 'react';
+import { GetStaticProps } from 'next'
 import crypto from 'crypto';
 
 const id = crypto.randomBytes(16).toString('hex');
@@ -17,7 +17,7 @@ const Index = () => {
 
 const REVALIDATE_DELAY = 30;
 
-export function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   console.log(id);
   return {
     props: {
